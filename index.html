@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>PW Lakshya 2027</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -19,25 +8,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
-        body { font-family: 'Outfit', sans-serif; background: radial-gradient(circle at top right, #1e293b, #0f172a); min-height: 100vh; margin: 0; overscroll-behavior-y: none; color: #e2e8f0; }
+        body { font-family: 'Outfit', sans-serif; background: radial-gradient(circle at top right, #1e293b, #0f172a); min-height: 100vh; margin: 0; color: #e2e8f0; }
         
-        /* Navigation Styling */
         .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(15, 23, 42, 0.98); backdrop-filter: blur(20px); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-around; padding: 10px 0 25px 0; z-index: 1000; }
-        .nav-btn { color: #94a3b8; display: flex; flex-direction: column; align-items: center; background: none; border: none; flex: 1; cursor: pointer; text-decoration: none; }
+        .nav-btn { color: #94a3b8; display: flex; flex-direction: column; align-items: center; background: none; border: none; flex: 1; cursor: pointer; }
         .nav-active { color: #3b82f6 !important; }
         .nav-btn i { font-size: 1.25rem; margin-bottom: 4px; }
         .nav-btn span { font-size: 10px; font-weight: 800; }
 
-        /* Card & Content Styling */
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: transform 0.2s; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; }
         .view { animation: fadeIn 0.3s ease-out; padding-bottom: 140px; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         .hidden { display: none; }
-        .chapter-box { border-left: 4px solid #3b82f6; margin-bottom: 1.5rem; padding: 15px; }
         
-        .lec-link { display: block; padding: 12px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: #cbd5e1; text-decoration: none; border: 1px solid transparent; }
-        .lec-link:hover { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); transform: translateX(5px); }
-        
+        /* Accordion Style */
+        .chapter-header { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 15px; border-left: 4px solid #3b82f6; }
+        .lecture-list { display: none; padding: 0 15px 15px 15px; }
+        .chapter-box.active .lecture-list { display: block; }
+        .chapter-box.active .fa-chevron-down { transform: rotate(180deg); }
+
+        .lec-link { display: block; padding: 12px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: #cbd5e1; text-decoration: none; border: 1px solid transparent; transition: 0.2s; }
+        .lec-link:hover { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); }
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; }
     </style>
 </head>
@@ -52,7 +43,7 @@
         <div id="view-home" class="view">
             <div onclick="showView('view-subjects')" class="glass-card overflow-hidden cursor-pointer shadow-2xl active:scale-95">
                 <div class="relative h-52">
-                    <img src="https://static.pw.live/5eb393ee95fab7468a79d189/ADMIN/605920d1-950f-4600-9268-8d3ae499713e.jpeg" alt="JEE Batch 2027" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent opacity-80"></div>
                     <div class="absolute bottom-4 left-5">
                         <span class="text-[10px] bg-blue-600 px-3 py-1 rounded-full font-bold uppercase mb-2 inline-block">LIVE BATCH</span>
@@ -60,13 +51,8 @@
                     </div>
                 </div>
                 <div class="p-5 flex justify-between items-center bg-slate-800/40">
-                    <div>
-                        <p class="text-sm font-bold text-blue-400">Class 12th JEE Main + Adv</p>
-                        <p class="text-[10px] opacity-60">Physics, Mathematics, Chemistry</p>
-                    </div>
-                    <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <i class="fas fa-arrow-right text-xs"></i>
-                    </div>
+                    <p class="text-sm font-bold text-blue-400">Class 12th JEE Materials</p>
+                    <i class="fas fa-arrow-right"></i>
                 </div>
             </div>
         </div>
@@ -86,42 +72,56 @@
             <button onclick="goBack()" class="mb-4 opacity-50 font-bold"><i class="fas fa-chevron-left mr-2"></i>SUBJECTS</button>
             <h3 class="text-xl font-bold mb-4 text-orange-400">Physics Chapters</h3>
 
-            <div class="glass-card chapter-box border-orange-500">
-                <h4 class="font-bold">Electrostatics</h4>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 01</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 02</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 03</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 04</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 05</a>
+            <div class="glass-card chapter-box mb-4">
+                <div class="chapter-header" onclick="toggleChapter(this)">
+                    <span class="font-bold">1. Electrostatics</span>
+                    <i class="fas fa-chevron-down text-xs opacity-50"></i>
+                </div>
+                <div class="lecture-list">
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 01</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 02</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 03</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 04</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 05</a>
+                </div>
             </div>
 
-            <div class="glass-card chapter-box border-orange-500">
-                <h4 class="font-bold">Current Electricity</h4>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 01</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 02</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 03</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 04</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 05</a>
+            <div class="glass-card chapter-box mb-4">
+                <div class="chapter-header" onclick="toggleChapter(this)">
+                    <span class="font-bold">2. Capacitance</span>
+                    <i class="fas fa-chevron-down text-xs opacity-50"></i>
+                </div>
+                <div class="lecture-list">
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 01</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 02</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 03</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 04</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 05</a>
+                </div>
             </div>
-            </div>
+        </div>
 
         <div id="view-maths" class="view hidden">
             <button onclick="goBack()" class="mb-4 opacity-50 font-bold"><i class="fas fa-chevron-left mr-2"></i>SUBJECTS</button>
             <h3 class="text-xl font-bold mb-4 text-blue-400">Maths Chapters</h3>
-
-            <div class="glass-card chapter-box border-blue-500">
-                <h4 class="font-bold">Relations & Functions</h4>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 01</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 02</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 03</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 04</a>
-                <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 05</a>
+            <div class="glass-card chapter-box mb-4">
+                <div class="chapter-header" onclick="toggleChapter(this)">
+                    <span class="font-bold">1. Relations & Functions</span>
+                    <i class="fas fa-chevron-down text-xs opacity-50"></i>
+                </div>
+                <div class="lecture-list">
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 01</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 02</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 03</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 04</a>
+                    <a href="https://youtube.com" target="_blank" class="lec-link">Lecture 05</a>
+                </div>
             </div>
-            </div>
+        </div>
 
-        <div id="view-privacy" class="view hidden"><h3 class="font-bold mb-4">Privacy Policy</h3><div class="glass-card p-5 text-sm">Organized JEE resources for students. Links are from open-source web.</div></div>
-        <div id="view-contact" class="view hidden"><h3 class="font-bold mb-4">Contact</h3><a href="https://t.me/YOUR_TG" target="_blank" class="glass-card p-5 block text-center font-bold text-blue-400"><i class="fab fa-telegram mr-2"></i>Join Telegram Channel</a></div>
-        <div id="view-tutorial" class="view hidden"><h3 class="font-bold mb-4">Guide</h3><div class="glass-card p-5 text-center">Click on any lecture to watch. Open Telegram for help.</div></div>
+        <div id="view-contact" class="view hidden"><h3 class="font-bold mb-4">Contact</h3><a href="#" class="glass-card p-5 block text-center font-bold text-blue-400">Join Telegram</a></div>
+        <div id="view-privacy" class="view hidden"><h3 class="font-bold mb-4">Policy</h3><div class="glass-card p-5 text-sm">Educational platform targeting JEE 2027.</div></div>
+        <div id="view-tutorial" class="view hidden"><h3 class="font-bold mb-4">Guide</h3><div class="glass-card p-5 text-center">Click a chapter to see lectures.</div></div>
 
     </div>
 
@@ -135,6 +135,11 @@
     <footer class="text-center pb-32 opacity-30 text-[10px] font-bold">DEVELOPED BY MONEYMATTERS</footer>
 
     <script>
+        function toggleChapter(element) {
+            const parent = element.parentElement;
+            parent.classList.toggle('active');
+        }
+
         let historyStack = ['view-home'];
         function showView(viewId) {
             document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
@@ -150,8 +155,4 @@
         document.getElementById('nav-home').classList.add('nav-active');
     </script>
 </body>
-</html>
-    
-  </body>
-  
 </html>
