@@ -2,234 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PW Batches Free Lecture | Access Arjuna & Lakshya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pw Lakshya Jee 2027</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <meta name="description" content="Access PW free netlify batch, pw batches, study ratna mod apk, and more. Get pw free lecture website links for Arjuna and Lakshya batches.">
-    <meta name="keywords" content="pw free netlify batch, pw batches, study ratna mod apk, pw study ratna, study stark, study sigma, next toppers, pw free lecture website, pw batches free access">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <script defer src="/_vercel/insights/script.js"></script>
+
     <style>
-        :root {
-            --primary: #5865f2;
-            --secondary: #2c2f33;
-            --accent: #00d1b2;
-            --text-light: #f6f6f6;
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; background: radial-gradient(circle at top right, #1e293b, #0f172a); min-height: 100vh; margin: 0; color: #e2e8f0; }
+        
+        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(15, 23, 42, 0.98); backdrop-filter: blur(20px); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-around; padding: 10px 0 25px 0; z-index: 1000; }
+        .nav-btn { color: #94a3b8; display: flex; flex-direction: column; align-items: center; background: none; border: none; flex: 1; cursor: pointer; }
+        .nav-active { color: #3b82f6 !important; }
+        .nav-btn i { font-size: 1.25rem; margin-bottom: 4px; }
+        .nav-btn span { font-size: 10px; font-weight: 800; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; }
+        .view { animation: fadeIn 0.3s ease-out; padding-bottom: 140px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hidden { display: none; }
+        
+        .chapter-header { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 15px; border-left: 4px solid #3b82f6; }
+        .lecture-list { display: none; padding: 0 15px 15px 15px; }
+        .chapter-box.active .lecture-list { display: block; }
+        .chapter-box.active .fa-chevron-down { transform: rotate(180deg); }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border-bottom: 1px solid #334155;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .batch-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .batch-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid #334155;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .batch-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .thumbnail-container {
-            width: 100%;
-            height: 200px;
-            background: #0f172a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .batch-logo {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            border: 2px dashed #475569;
-            border-radius: 10px;
-        }
-
-        .batch-info {
-            padding: 25px;
-            flex-grow: 1;
-        }
-
-        .batch-info h3 {
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            font-weight: 800;
-        }
-
-        .redirect-link {
-            display: block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-            margin-top: 10px;
-        }
-
-        .about-section {
-            background: var(--card-bg);
-            padding: 40px;
-            margin-top: 60px;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid #334155;
-        }
-
-        .disclaimer {
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(248, 113, 113, 0.1);
-            border: 1px solid #f87171;
-            border-radius: 10px;
-            color: #fca5a5;
-            font-size: 0.9rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            color: #64748b;
-        }
-
-        .seo-keywords {
-            margin-top: 20px;
-            font-size: 0.7rem;
-            opacity: 0.1; /* Almost invisible but indexed */
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-        }
+        .lec-link { display: block; padding: 12px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: #cbd5e1; text-decoration: none; border: 1px solid transparent; transition: 0.2s; }
+        .lec-link:hover { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); }
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>PW Batches Free Lecture</h1>
-        <p>Developed by Money Matters</p>
+    <header class="p-6 text-center sticky top-0 bg-[#0f172a]/90 backdrop-blur-md z-40">
+        <h1 class="text-2xl uppercase gradient-text">PW Lakshya 2027</h1>
     </header>
 
-    <div class="container">
-        <div class="batch-grid">
-            
-            <a href="https://DEMO-LINK-HERE.com" class="batch-card">
-                <div class="thumbnail-container">
-                    <img src="https://via.placeholder.com/200?text=LOGO+HERE" alt="Arjuna JEE 11" class="batch-logo">
+    <div class="max-w-md mx-auto px-5">
+        
+        <div id="view-home" class="view">
+            <div onclick="showView('view-subjects')" class="glass-card overflow-hidden cursor-pointer shadow-2xl active:scale-95">
+                <div class="relative h-52">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-5">
+                        <span class="text-[10px] bg-blue-600 px-3 py-1 rounded-full font-bold uppercase mb-2 inline-block">LIVE BATCH</span>
+                        <h2 class="text-3xl font-extrabold text-white">Enter Lakshya</h2>
+                    </div>
                 </div>
-                <div class="batch-info">
-                    <h3>Arjuna JEE Class 11</h3>
-                    <div class="redirect-link">Access Batch</div>
+                <div class="p-5 flex justify-between items-center bg-slate-800/40">
+                    <p class="text-sm font-bold text-blue-400">Class 12th JEE Materials</p>
+                    <i class="fas fa-arrow-right"></i>
                 </div>
-            </a>
-
-            <a href="https://DEMO-LINK-HERE.com" class="batch-card">
-                <div class="thumbnail-container">
-                    <img src="https://via.placeholder.com/200?text=LOGO+HERE" alt="Arjuna NEET 11" class="batch-logo">
-                </div>
-                <div class="batch-info">
-                    <h3>Arjuna NEET Class 11</h3>
-                    <div class="redirect-link">Access Batch</div>
-                </div>
-            </a>
-
-            <a href="https://DEMO-LINK-HERE.com" class="batch-card">
-                <div class="thumbnail-container">
-                    <img src="https://via.placeholder.com/200?text=LOGO+HERE" alt="Lakshya JEE 12" class="batch-logo">
-                </div>
-                <div class="batch-info">
-                    <h3>Lakshya JEE Class 12</h3>
-                    <div class="redirect-link">Access Batch</div>
-                </div>
-            </a>
-
-            <a href="https://DEMO-LINK-HERE.com" class="batch-card">
-                <div class="thumbnail-container">
-                    <img src="https://via.placeholder.com/200?text=LOGO+HERE" alt="Lakshya NEET 12" class="batch-logo">
-                </div>
-                <div class="batch-info">
-                    <h3>Lakshya NEET Class 12</h3>
-                    <div class="redirect-link">Access Batch</div>
-                </div>
-            </a>
-
+            </div>
         </div>
 
-        <section class="about-section">
-            <h2>About Section</h2>
-            <p>I don't own any courses. This website is developed by <strong>Money Matters</strong> to help users navigate to their respective study sites.</p>
-            <div class="disclaimer">
-                Disclaimer: All content and logos belong to their respective owners.
+        <div id="view-subjects" class="view hidden">
+            <button onclick="goBack()" class="mb-4 opacity-50 font-bold"><i class="fas fa-chevron-left mr-2"></i>HOME</button>
+            <div class="grid gap-3">
+                <div onclick="showView('view-physics')" class="glass-card p-5 cursor-pointer flex items-center space-x-4 border-l-4 border-orange-500"><div class="text-orange-400 font-bold">PHY</div><span class="font-bold">Physics</span></div>
+                <div onclick="showView('view-maths')" class="glass-card p-5 cursor-pointer flex items-center space-x-4 border-l-4 border-blue-500"><div class="text-blue-400 font-bold">MAT</div><span class="font-bold">Mathematics</span></div>
+                <div onclick="showView('view-pc')" class="glass-card p-5 cursor-pointer flex items-center space-x-4 border-l-4 border-cyan-500"><div class="text-cyan-400 font-bold">PC</div><span class="font-bold">Physical Chem</span></div>
+                <div onclick="showView('view-oc')" class="glass-card p-5 cursor-pointer flex items-center space-x-4 border-l-4 border-green-500"><div class="text-green-400 font-bold">OC</div><span class="font-bold">Organic Chem</span></div>
+                <div onclick="showView('view-ioc')" class="glass-card p-5 cursor-pointer flex items-center space-x-4 border-l-4 border-purple-500"><div class="text-purple-400 font-bold">IOC</div><span class="font-bold">Inorganic Chem</span></div>
             </div>
-        </section>
+        </div>
+
+        <div id="view-physics" class="view hidden">
+            <button onclick="goBack()" class="mb-4 opacity-50 font-bold"><i class="fas fa-chevron-left mr-2"></i>SUBJECTS</button>
+            <h3 class="text-xl font-bold mb-4 text-orange-400">Physics Chapters</h3>
+            <div class="glass-card chapter-box mb-4">
+                <div class="chapter-header" onclick="toggleChapter(this)">
+                    <span class="font-bold">1. Electrostatics</span>
+                    <i class="fas fa-chevron-down text-xs opacity-50"></i>
+                </div>
+                <div class="lecture-list">
+                    <a href="#" target="_blank" class="lec-link">Lecture 01</a>
+                    <a href="#" target="_blank" class="lec-link">Lecture 02</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-privacy" class="view hidden">
+            <button onclick="goBack()" class="mb-4 opacity-50 font-bold"><i class="fas fa-chevron-left mr-2"></i>HOME</button>
+            <div class="glass-card p-6 space-y-4">
+                <h3 class="text-xl font-bold text-blue-400">Batch Policy</h3>
+                <p class="text-xs">1. <b>No Ownership:</b> We do not own or host any videos; all <b>Lakshya JEE</b> materials belong to <b>Physics Wallah</b>.</p>
+                <p class="text-xs">2. <b>No Payments:</b> We will <b>never ask for any payment</b> for these <b>Free PW Lectures</b>.</p>
+                <p class="text-xs">3. <b>Public Directory:</b> This is only an index of <b>Free Lakshya JEE</b> links available publicly.</p>
+            </div>
+        </div>
+
+        <div id="view-contact" class="view hidden"><h3 class="font-bold mb-4">Contact</h3><a href="#" class="glass-card p-5 block text-center font-bold text-blue-400">Join Telegram</a></div>
+        <div id="view-tutorial" class="view hidden"><h3 class="font-bold mb-4">Guide</h3><div class="glass-card p-5 text-center text-sm">Click a Subject -> Click a Chapter -> Watch your Lectures.</div></div>
+
     </div>
 
-    <footer>
-        <p>&copy; 2026 Money Matters</p>
-        <div class="seo-keywords">
-            pw free netlify batch, pw batches, study ratna mod apk, pw study ratna, study stark, study sigma, next toppers, pw free lecture website, pw batches free access
-        </div>
-    </footer>
+    <div class="flex items-center justify-center space-x-2 pb-24 opacity-60">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span class="text-[10px] font-bold uppercase">Visits: <span id="v-count">0</span></span>
+    </div>
+
+    <nav class="bottom-nav">
+        <button onclick="showView('view-home')" class="nav-btn" id="nav-home"><i class="fas fa-home"></i><span>HOME</span></button>
+        <button onclick="showView('view-tutorial')" class="nav-btn" id="nav-tutorial"><i class="fas fa-play-circle"></i><span>GUIDE</span></button>
+        <button onclick="showView('view-contact')" class="nav-btn" id="nav-contact"><i class="fas fa-envelope"></i><span>CONTACT</span></button>
+        <button onclick="showView('view-privacy')" class="nav-btn" id="nav-privacy"><i class="fas fa-shield-alt"></i><span>POLICY</span></button>
+    </nav>
+
+    <footer class="text-center pb-10 opacity-30 text-[10px] font-bold">DEVELOPED BY MONEYMATTERS</footer>
 
     <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        function toggleChapter(element) {
+            element.parentElement.classList.toggle('active');
+        }
+
+        let historyStack = ['view-home'];
+        function showView(viewId) {
+            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+            document.getElementById(viewId).classList.remove('hidden');
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('nav-active'));
+            const map = {'view-home':'nav-home','view-tutorial':'nav-tutorial','view-contact':'nav-contact','view-privacy':'nav-privacy','view-subjects':'nav-home','view-physics':'nav-home','view-maths':'nav-home','view-pc':'nav-home','view-oc':'nav-home','view-ioc':'nav-home'};
+            if(map[viewId]) document.getElementById(map[viewId]).classList.add('nav-active');
+            if (historyStack[historyStack.length - 1] !== viewId) { historyStack.push(viewId); history.pushState({viewId}, ""); }
+            window.scrollTo(0,0);
+        }
+        function goBack() { if (historyStack.length > 1) { historyStack.pop(); showView(historyStack[historyStack.length-1]); historyStack.pop(); } }
+        window.onpopstate = () => goBack();
+        document.getElementById('nav-home').classList.add('nav-active');
+
+        // Simple counter for visual appeal
+        let c = localStorage.getItem('vc') || 120;
+        c = parseInt(c) + 1;
+        localStorage.setItem('vc', c);
+        document.getElementById('v-count').innerText = c.toLocaleString();
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    </body>
+</body>
 </html>
